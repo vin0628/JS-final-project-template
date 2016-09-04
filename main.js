@@ -4,7 +4,7 @@ var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 function draw(){
   ctx.drawImage(bglmg,0,0);
-  ctx.drawImage(slime,100,1000);
+  ctx.drawImage(slime,100,500);
 }
 setTimeout(draw,1000);
 var slime = document.createElement("img");
