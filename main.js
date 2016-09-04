@@ -10,6 +10,6 @@ setInterval(draw,1000);
 var slimeimg = document.createElement("img");
 slimeimg.src = "images/slime.gif";
 var slime = {
-  X:0,//x座標
+  x:0,//x座標
   y:0//y座標
 };
