@@ -8,7 +8,7 @@ function draw(){
 }
 setTimeout(draw,1000);
 var slime = document.createElement("img");
-slimeImg.src = "images/slime.gif";
+slime.src = "images/slime.gif";
 var slime = {
   X:0,//x座標
   y:0//y座標
