@@ -3,6 +3,6 @@ bglmg.src = "images/map.png";
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 function draw(){
-  ctx.drawimage(bgimg,0,0);
+  ctx.drawImage(bgimg,0,0);
 }
 setTimeout(draw,1000);
