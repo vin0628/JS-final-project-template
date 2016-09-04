@@ -11,5 +11,5 @@ var slime = document.createElement("img");
 slimeImg.src = "images/slime.gif";
 var slime = {
   X:0,//x座標
-  y:0.//y座標
+  y:0//y座標
 };
