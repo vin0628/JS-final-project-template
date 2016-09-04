@@ -5,4 +5,4 @@ var ctx = canvas.getContext("2d");
 function draw(){
   ctx.drawimage(bgimg,0,0);
 }
-setTimeout(draw,1000):
+setTimeout(draw,1000);
