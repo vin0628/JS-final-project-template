@@ -7,6 +7,8 @@ var cursor={x:0,y:0};
 var tower = document.createElement("img");
 tower.src = "images/tower.png";
 
+var tower_btn = document.createElement("img");
+tower_btn.src = "images/tower-btn.png";
 
 function draw(){
   ctx.drawImage(bglmg,0,0);
@@ -23,8 +25,7 @@ var slime = {
   y:0//y座標
 };
 setInterval(draw,16);
-var tower_btn = document.createElement("img");
-tower_btn.src = "images/tower-btn.png";
+
 
 $("#game-canvas").on("mousemove",
 function(event){
