@@ -5,7 +5,7 @@ var ctx = canvas.getContext("2d");
 var isBuilding = false
 
 var cursor={x:0,y:0};
-var tower = document.createElement("img");
+var towerimg = document.createElement("img");
 tower.src = "images/tower.png";
 
 var tower_btn = document.createElement("img");
@@ -15,7 +15,7 @@ function draw(){
   ctx.drawImage(bglmg,0,0);
   ctx.drawImage(slimeimg,slime.x,slime.y);
   ctx.drawImage(tower_btn,640-64,480-64,64,64);
-  ctx.drawImage(tower,tower.x,tower.y);
+  ctx.drawImage(towerimg,tower.x,tower.y);
   if(isBuilding == true){
     ctx.drawImage(tower,cursor.x,cursor.y);
     }
