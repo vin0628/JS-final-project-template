@@ -5,6 +5,7 @@ var ctx = canvas.getContext("2d");
 function draw(){
   ctx.drawImage(bglmg,0,0);
   ctx.drawImage(slimeimg,slime.x,slime.y);
+   ctx.drawImage(tower,0,0);
 };
 setInterval(draw,16);
 var slimeimg = document.createElement("img");
@@ -15,7 +16,3 @@ var slime = {
 };
 var tower = document.createElement("img");
 tower.src = "images/tower-btn.png";
-var tower = {
-  x:608,//x座標
-  y:448//y座標
-};
