@@ -14,5 +14,6 @@ var slime = {
   x:0,//x座標
   y:0//y座標
 };
+setInterval(draw,16);
 var tower = document.createElement("img");
 tower.src = "images/tower-btn.png";
