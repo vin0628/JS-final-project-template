@@ -30,8 +30,8 @@ setInterval(draw,16);
 $("#game-canvas").on("mousemove",
 function(event){
   console.log("x:"+event.offsetX+",y"+event.offsetY);
-  cursor.x=event.offsetx;
-  cursor.y=event.offsety;
+  cursor.x=event.offsetX;
+  cursor.y=event.offsetY;
 });
 
 $("#game-canvas").on("click",function(){
