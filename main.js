@@ -18,6 +18,6 @@ setInterval(draw,16);
 var tower = document.createElement("img");
 tower.src = "images/tower-btn.png";
 
-$("#canvas").on("mousemove",function(event)){
+$("#canvas").on("mousemove",function(event){
   console.log("x:"+event.offsetX+",y"+event.offsetY)
-};
+});
