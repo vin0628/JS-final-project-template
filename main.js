@@ -5,7 +5,7 @@ var ctx = canvas.getContext("2d");
 function draw(){
   ctx.drawImage(bglmg,0,0);
   ctx.drawImage(slimeimg,slime.x,slime.y);
-   ctx.drawImage(tower,32,32);
+   ctx.drawImage(tower,0,0,64,64);
 };
 setInterval(draw,16);
 var slimeimg = document.createElement("img");
