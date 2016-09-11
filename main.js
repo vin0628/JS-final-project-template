@@ -3,6 +3,11 @@ bglmg.src = "images/map.png";
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
+var cursor={x:0,y:0};
+var tower = document.createElement("img");
+tower.src = "images/tower.png";
+
+
 function draw(){
   ctx.drawImage(bglmg,0,0);
   ctx.drawImage(slimeimg,slime.x,slime.y);
@@ -28,6 +33,3 @@ function(event){
   cursor.y=event.offsety;
 });
 
-var cursor={x:0,y:0};
-var tower = document.createElement("img");
-tower.src = "images/tower.png";
