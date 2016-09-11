@@ -13,3 +13,9 @@ var slime = {
   x:0,//x座標
   y:0//y座標
 };
+var tower = document.createElement("img");
+tower.src = "images/tower-btn.png";
+var tower = {
+  x:608,//x座標
+  y:448//y座標
+};
