@@ -23,7 +23,7 @@ function draw(){
     }
 };
 
-setInterval(draw,1000/FPS);
+setInterval(draw,64/FPS);
 var slimeimg = document.createElement("img");
 slimeimg.src = "images/slime.gif";
 var slime = {
