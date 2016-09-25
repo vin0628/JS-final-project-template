@@ -17,7 +17,7 @@ function draw(){
   ctx.drawImage(tower_btn,640-64,480-64,64,64);
   ctx.drawImage(towerimg,towerimg.x,towerimg.y);
   if(isBuilding == true){
-    ctx.drawImage(tower,cursor.x,cursor.y);
+    ctx.drawImage(towerimg,cursor.x,cursor.y);
     }
 };
 
