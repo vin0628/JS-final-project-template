@@ -4,6 +4,7 @@ var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 var isBuilding = false
 
+var FPS = 60;
 var cursor={x:0,y:0};
 var towerimg = document.createElement("img");
 towerimg.src = "images/tower.png";
@@ -14,6 +15,7 @@ tower_btn.src = "images/tower-btn.png";
 function draw(){
   ctx.drawImage(bglmg,0,0);
   ctx.drawImage(slimeimg,slime.x,slime.y);
+  slime.move();
   ctx.drawImage(tower_btn,640-64,480-64,64,64);
   ctx.drawImage(towerimg,towerimg.x,towerimg.y);
   if(isBuilding == true){
@@ -21,7 +23,7 @@ function draw(){
     }
 };
 
-setInterval(draw,16);
+setInterval(draw,1000/FPS);
 var slimeimg = document.createElement("img");
 slimeimg.src = "images/slime.gif";
 var slime = {
@@ -29,8 +31,12 @@ var slime = {
   y:448,//y座標
   speedx:0,
   speedy:-64,
+  move:function(){
+  this.x = this.x+speedx/FPS
+  this.y = this.y+speedy/FPS  
+  }
 };
-setInterval(draw,16);
+
 
 
 $("#game-canvas").on("mousemove",
@@ -54,3 +60,4 @@ $("#game-canvas").on("click",function(){
       tower.y = cursor.y
     }
   })
+
