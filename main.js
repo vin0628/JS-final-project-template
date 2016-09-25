@@ -32,8 +32,8 @@ var slime = {
   speedx:0,
   speedy:-64,
   move:function(){
-  this.x = this.x+this.speed.x/FPS
-  this.y = this.y+this.speed.y/FPS  
+  this.x = this.x+this.speedx/FPS
+  this.y = this.y+this.speedy/FPS  
   }
 };
 
