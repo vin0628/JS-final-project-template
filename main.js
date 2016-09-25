@@ -25,8 +25,8 @@ setInterval(draw,16);
 var slimeimg = document.createElement("img");
 slimeimg.src = "images/slime.gif";
 var slime = {
-  x:0,//x座標
-  y:0//y座標
+  x:96,//x座標
+  y:448//y座標
 };
 setInterval(draw,16);
 
