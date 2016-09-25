@@ -26,7 +26,9 @@ var slimeimg = document.createElement("img");
 slimeimg.src = "images/slime.gif";
 var slime = {
   x:96,//x座標
-  y:448//y座標
+  y:448,//y座標
+  speedx:0,
+  speedy:-64,
 };
 setInterval(draw,16);
 
@@ -48,7 +50,7 @@ $("#game-canvas").on("click",function(){
     }
   }else
     if(isBuilding==true){
-      tower.x = cursor.x; 
-      tower.y = cursor.y;
+      tower.x = cursor.x, 
+      tower.y = cursor.y
     }
   })
