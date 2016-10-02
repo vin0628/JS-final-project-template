@@ -60,4 +60,7 @@ $("#game-canvas").on("click",function(){
       tower.y = cursor.y
     }
   })
-
+var enemyPath=[
+  {x:123,y:96}
+  {x:416,y:96}
+];
