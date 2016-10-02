@@ -4,6 +4,7 @@ var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 var isBuilding = false
 
+
 var FPS = 60;
 var cursor={x:0,y:0};
 var towerimg = document.createElement("img");
@@ -60,7 +61,4 @@ $("#game-canvas").on("click",function(){
       tower.y = cursor.y
     }
   })
-var enemyPath=[
-  {x:123,y:96}
-  {x:416,y:96}
-];
+
