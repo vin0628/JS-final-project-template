@@ -17,14 +17,14 @@ var enemyPath = [
   {x: 224, y: 320},
   {x: 544, y: 320},
 ];
-var enemy = new Enemy
+
 function Enemy(){
-  this.x:96;
-  this.y:400;
-  v:[1,1];
-  pathDes:0;
-  this.speedX:0;
-  this.speedY:-64;
+  this.x=96;
+  this.y=400;
+  v=[1,1];
+  pathDes=0;
+  this.speedX=0;
+  this.speedY=-64;
   this.move: function(){
     if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, 64/fps, 64/fps)) {
       this.x = enemyPath[this.pathDes].x;
@@ -57,6 +57,7 @@ function Enemy(){
   }
 };
 var cursor = {x: 0, y: 0};
+var enemy = new Enemy();
 var isBuilding = false;
 
 function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight){
