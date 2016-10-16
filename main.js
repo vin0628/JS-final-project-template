@@ -68,6 +68,7 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
   }
 }
 
+var clock = 0;
 function draw(){
   clock++;
  
