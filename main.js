@@ -18,7 +18,7 @@ var enemyPath = [
   {x: 544, y: 320},
 ];
 var enemy = new Enemy
-function Enemy = {
+function Enemy {
   this.x:96,
   this.y:400,
   v:[1,1],
