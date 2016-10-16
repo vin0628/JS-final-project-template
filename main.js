@@ -57,7 +57,7 @@ function Enemy(){
   }
 };
 var cursor = {x: 0, y: 0};
-var enemy = [];
+var enemies = [];
 var isBuilding = false;
 
 function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight){
@@ -69,13 +69,26 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
 }
 
 function draw(){
-  enemy.move();
-  ctx.drawImage(bgImg,0,0);
+  clock++;
+ 
+    
+  ctx.drawImage(bgIm,0,0);
   ctx.drawImage(eImg,enemy.x,enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
   ctx.drawImage(towerImg, tower.x, tower.y);
+  
+  for(var i = 0;i<enemies.length;i++){
+    enemies[i].move();
+    ctx.drawlmage(slimelmg,enemies[i].x,enemies[i].y);
+  }
+  
   if(isBuilding == true) {
     ctx.drawImage(towerImg, cursor.x, cursor.y);  
+  }
+  
+if((clock%80)==0){
+    var newEnemy = new Enemy();
+    enemies.push(newEnemy);
   }
   
 }
