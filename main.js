@@ -1,7 +1,7 @@
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
 var eImg = document.createElement("img");
-eImg.src = "images/rukia.gif";
+eImg.src = "images/slime.gif";
 var tImg = document.createElement("img");
 tImg.src = "images/tower-btn.png";
 var towerImg = document.createElement("img");
