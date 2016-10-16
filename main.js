@@ -38,11 +38,52 @@ var slime = {
   x:96,//x座標
   y:448,//y座標
   speedx:0,
-  speedy:-64,
-  move:function(){
-  this.x = this.x+this.speedx/FPS
-  this.y = this.y+this.speedy/FPS  
-  }
+  speedy:64,
+  pathDes:0
+   move:function(){
+        if(isCollided(
+          enemyPath[this.pathDes].x,
+          enemyPath[this.pathDes].y,
+          this.x,this.y,
+          this.speed/FPS,
+          this.speed/FPS,
+  )){
+  this.x = enemyPath[this.pathDes].x;
+  this.y = enemyPath[this.pathDes].y;
+  
+  if(this.x == enemyPath[this.pathDes+1].x){
+    if(this.y > enemyPath[this.pathDes+1].y){
+      this.speedY = -64;
+      this.speedX = 0;
+    } else {
+      this.speedY = 64;
+      this.speedX = 0;
+    }
+}else if(this.y == enemyPath[this.PathDes+1].y) {
+  if(this.x > enemyPath[this.pathDes+1].x) {
+    this.speedY = 0;
+      
+      this.x = this.x+this.speedx/FPS;
+      this.y = this.y+this.speedy/FPS;
+}
+
+
+function isCollided(
+  pointX,pointY,
+  targetX,targetY,
+  targetWidth,
+  targetHeight,
+  ){
+    if( pointX >= targetX
+       && pointX <= targetX + targetWidth
+       && pointY >= targetY
+       && pointY <= targetY + targetHeight
+       ){
+      return true;
+    }else{
+      return false;
+    }
+  }    
 };
 
 
@@ -58,14 +99,17 @@ $("#game-canvas").on("click",function(){
   if(cursor.x >= 640-64 && cursor.y >= 480-64){
     if(isBuilding == false){
       isBuilding = true;
-    }else
+    } else {
     if(isBuilding == true){
       isBuilding = false;
     }
-  }else
+  } else {
     if(isBuilding==true){
-      tower.x = cursor.x, 
-      tower.y = cursor.y
+      tower.x = cursor.x; 
+      tower.y = cursor.y;
+      
+      isBuiding = fallse
+      }
     }
   })
 
