@@ -45,8 +45,8 @@ var slime = {
           enemyPath[this.pathDes].x,
           enemyPath[this.pathDes].y,
           this.x,this.y,
-          this.speed/FPS,
-          this.speed/FPS,
+          this.speed/FPS;
+          this.speed/FPS;
   )){
   this.x = enemyPath[this.pathDes].x;
   this.y = enemyPath[this.pathDes].y;
