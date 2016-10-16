@@ -73,7 +73,7 @@ function draw(){
   clock++;
   
   ctx.drawImage(bgImg,0,0);
-  ctx.drawImage(eImg,enemy.x,enemy.y);
+  ctx.drawImage(eImg,Enemy.x,Enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
   ctx.drawImage(towerImg, tower.x, tower.y);
   
