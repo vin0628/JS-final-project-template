@@ -57,7 +57,7 @@ function Enemy(){
   }
 };
 var cursor = {x: 0, y: 0};
-var enemy = new Enemy();
+var enemy = [];
 var isBuilding = false;
 
 function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight){
