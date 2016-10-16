@@ -40,14 +40,8 @@ var slime = {
   speedx:0,
   speedy:64,
   pathDes:0
-  move: function(){
-        if(isCollided(
-          enemyPath[this.pathDes].x,
-          enemyPath[this.pathDes].y,
-          this.x,this.y,
-          64/FPS;
-          64/FPS;
-  )){
+   move: function(){
+    if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, 64/fps, 64/fps)) {
   this.x = enemyPath[this.pathDes].x;
   this.y = enemyPath[this.pathDes].y;
   
