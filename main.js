@@ -71,9 +71,8 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
 var clock = 0;
 function draw(){
   clock++;
- 
-    
-  ctx.drawImage(bgIm,0,0);
+  
+  ctx.drawImage(bgImg,0,0);
   ctx.drawImage(eImg,enemy.x,enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
   ctx.drawImage(towerImg, tower.x, tower.y);
