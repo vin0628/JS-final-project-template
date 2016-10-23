@@ -85,7 +85,7 @@ function draw(){
   tower.searchEnemy();
   if(tower.aimingEnemyld!=null){
     var id = tower.aimingEnemyld;
-    ctx.drawlmage(crosshairlmge,enemise[id].x,
+    ctx.drawlmage(crosshairlmg,enemise[id].x,
   enemise[id].y);
   }
   
