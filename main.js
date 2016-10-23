@@ -85,8 +85,8 @@ function draw(){
   tower.searchEnemy();
   if(tower.aimingEnemyld!=null){
     var id = tower.aimingEnemyld;
-    ctx.drawlmage(crosshairlmg,enemise[id].x,
-  enemise[id].y);
+    ctx.drawlmage(crosshairlmg,enemies[id].x,
+  enemies[id].y);
   }
   
   ctx.font = "24px Arial";
