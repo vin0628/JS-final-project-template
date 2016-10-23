@@ -21,12 +21,12 @@ var enemyPath = [
 function Enemy(){
   this.x=96;
   this.y=400;
-  v=[1,1];
-  pathDes=0;
+  this.v=[1,1];
+  this.pathDes=0;
   this.speedX=0;
   this.speedY=-64;
   this.move= function(){
-    if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, this.speed/fps, this.speed/fps)) {
+    if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, 64/fps, 64/fps)) {
       this.x = EnemyPath[this.pathDes].x;
       this.y = EnemyPath[this.pathDes].y;
       
@@ -76,6 +76,9 @@ function draw(){
   ctx.drawImage(eImg,Enemy.x,Enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
   ctx.drawImage(towerImg, tower.x, tower.y);
+  ctx.font = "24px Arial";
+  ctx.fillstyle = "white";
+  ctx.fillText("HP"10.10)
   
   for(var i = 0;i<enemies.length;i++){
     enemies[i].move();
