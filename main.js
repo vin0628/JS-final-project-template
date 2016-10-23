@@ -8,6 +8,7 @@ var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
+var hp = 100
 var fps = 60;
 var enemyPath = [
   {x: 96, y: 64},
@@ -82,7 +83,7 @@ function draw(){
   
   for(var i = 0;i<enemies.length;i++){
     enemies[i].move();
-    ctx.drawlmage(slimelmg,enemies[i].x,enemies[i].y);
+    ctx.drawImage(eImg,enemies[i].x,enemies[i].y);
   }
   
   if(isBuilding == true) {
