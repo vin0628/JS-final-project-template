@@ -28,8 +28,8 @@ function Enemy(){
   this.speedY=-64;
   this.move= function(){
     if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, 64/fps, 64/fps)) {
-      this.x = EnemyPath[this.pathDes].x;
-      this.y = EnemyPath[this.pathDes].y;
+      this.x = enemyPath[this.pathDes].x;
+      this.y = enemyPath[this.pathDes].y;
       
       if(this.x == enemyPath[this.pathDes+1].x) {
         if(this.y > enemyPath[this.pathDes+1].y) {
