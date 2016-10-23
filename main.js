@@ -77,6 +77,7 @@ function draw(){
   ctx.drawImage(eImg,Enemy.x,Enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
   ctx.drawImage(towerImg, tower.x, tower.y);
+  
   ctx.font = "24px Arial";
   ctx.fillstyle = "white";
   ctx.fillText("HP",10,10);
