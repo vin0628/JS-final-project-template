@@ -85,11 +85,12 @@ function draw(){
   ctx.fillText("HP:" + hp, 10, 50);
   
   for(var i = 0; i < enemies.lenght; i++){
-    if(enemies[i].hp <= 0)
+    if(enemies[i].hp <= 0){
       enemies.splice(i,1);
       } else {
         enemies[i].move();
         ctx.drawImage(eImg,enemies[i].x,enemies[i].y);
+      }
   }
   
   if(isBuilding == true) {
