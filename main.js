@@ -20,6 +20,7 @@ var enemyPath = [
 ];
 
 function Enemy(){
+  this.hp=100
   this.x=96;
   this.y=400;
   this.v=[1,1];
@@ -70,6 +71,7 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
 }
 
 var clock = 0;
+
 function draw(){
   clock++;
   
@@ -81,11 +83,13 @@ function draw(){
   ctx.font = "24px Arial";
   ctx.fillStyle = "white";
   ctx.fillText("HP:" + hp, 10, 50);
-
   
-  for(var i = 0;i<enemies.length;i++){
-    enemies[i].move();
-    ctx.drawImage(eImg,enemies[i].x,enemies[i].y);
+  for(var i = 0; i < enemies.lenght; i++){
+    if(enemies[i].hp <= 0)
+      enemies.splice(i,1);
+      }else{
+        enemies[i].move();
+        ctx.drawImage(eImg,enemies[i].x,enemies[i].y);
   }
   
   if(isBuilding == true) {
