@@ -79,8 +79,9 @@ function draw(){
   ctx.drawImage(towerImg, tower.x, tower.y);
   
   ctx.font = "24px Arial";
-  ctx.fillstyle = "white";
-  ctx.fillText("HP",10,10);
+  ctx.fillStyle = "white";
+  ctx.fillText("HP:" + hp, 10, 50);
+
   
   for(var i = 0;i<enemies.length;i++){
     enemies[i].move();
