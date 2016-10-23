@@ -87,7 +87,7 @@ function draw(){
   for(var i = 0; i < enemies.lenght; i++){
     if(enemies[i].hp <= 0)
       enemies.splice(i,1);
-      }else{
+      } else {
         enemies[i].move();
         ctx.drawImage(eImg,enemies[i].x,enemies[i].y);
   }
