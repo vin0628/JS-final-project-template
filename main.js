@@ -70,6 +70,8 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
   }
 }
 
+var crosshairlmg = document.createElement("img")
+crosshairlmg.src = "images/crosshair.png";
 var clock = 0;
 
 function draw(){
@@ -79,6 +81,13 @@ function draw(){
   ctx.drawImage(eImg,Enemy.x,Enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
   ctx.drawImage(towerImg, tower.x, tower.y);
+  
+  tower.searchEnemy();
+  if(tower.aimingEnemyld!=null){
+    var id = tower.aimingEnemyld;
+    ctx.drawlmage(crosshairlmge,enemise[id].x,
+  enemise[id].y);
+  }
   
   ctx.font = "24px Arial";
   ctx.fillStyle = "white";
@@ -130,7 +139,25 @@ $("#game-canvas").on("mousemove", function(event) {
   cursor.y = event.offsetY - (event.offsetY%32);
 });
 
-var tower = {x:0, y:0};
+var tower = {
+  x:0,
+  y:0,
+  range:96,
+  aimingEnemyld:null;
+  searchEnemy:function(){
+    for(var i=0; i < enemies.length; i++){
+      var distance = Math.sqrt(
+          Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
+      );
+      if(distance <= this.range){
+          this.aimingEnemyld = i;
+          return;
+      }
+    }
+    this.aimingEnemyld = null
+  }
+};
+
 $("#game-canvas").on("click", function() {
   if(cursor.x >= 640-64 && cursor.y >= 480-64) {
     if(isBuilding == false) {
