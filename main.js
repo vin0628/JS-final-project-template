@@ -152,7 +152,7 @@ var tower = {
     this.readyToShootTime -= 1/fps
     for(var i=0; i < enemies.length; i++){
       var distance = Math.sqrt(
-          Math.pow(this.x-enemies[id].x,2)+Math.pow(this.y-enemies[id].y,2)
+          Math.pow(this.x-enemies[id].x,2)+Math.pow(this.y-enemies[id].y,2);
       );
       if(distance <= this.range){
           this.aimingEnemyld = i;
