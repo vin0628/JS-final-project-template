@@ -8,7 +8,9 @@ var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
-var hp = 100
+var hp = 100;
+var score = 0;
+var money = 0;
 var fps = 60;
 var enemyPath = [
   {x: 96, y: 64},
