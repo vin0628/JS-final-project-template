@@ -174,7 +174,7 @@ var tower = {
   ctx.lineWidth = 3;
   ctx.stroke();
     
-  enemies[id].hp -= this.damage
+  enemies[i].hp -= this.damage
   }
   
 };
