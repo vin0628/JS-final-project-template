@@ -144,6 +144,9 @@ var tower = {
   x:0,
   y:0,
   range:96,
+  firRate:1
+  readyToShootTime:1
+  damage:10
   aimingEnemyld:null,
   searchEnemy:function(){
     this.readyToShootTime -= 1/fps
@@ -153,7 +156,7 @@ var tower = {
       );
       if(distance <= this.range){
           this.aimingEnemyld = i;
-        if(this.readyToShootTime<=0){
+        if(this.readyToShootTime <= 0){
           this.shoot();
           this.readyToShootTime = this.fireRate;
           }
@@ -170,6 +173,8 @@ var tower = {
   ctx.strokeStyle='red';
   ctx.lineWidth = 3;
   ctx.stroke();
+    
+  enemies[id].hp -= this.damage
   }
   
 };
