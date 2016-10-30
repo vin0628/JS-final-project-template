@@ -145,17 +145,32 @@ var tower = {
   range:96,
   aimingEnemyld:null,
   searchEnemy:function(){
+    this.readyToShootTime -= 1/FPS
     for(var i=0; i < enemies.length; i++){
       var distance = Math.sqrt(
           Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
       );
       if(distance <= this.range){
           this.aimingEnemyld = i;
+        if(this.readyToShootTime<=0){
+          this.shoot();
+          this.readyToShootTime = this.fireRate;
+          }
           return;
       }
     }
     this.aimingEnemyld = null
+  },
+  
+  shoot:function(){
+  ctx.beginPath();
+  ctx.moveTo(this.x,this.y);
+  ctx.lineTo(enemies[i].x,enemies[i].y);
+  ctx.strokeStyle='red';
+  ctx.lineWidth = 3;
+  ctx.stroke();
   }
+  
 };
 
 $("#game-canvas").on("click", function() {
