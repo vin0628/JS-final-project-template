@@ -98,6 +98,8 @@ function draw(){
   
   for(var i = 0; i < enemies.length; i++){
     if(enemies[i].hp <= 0){
+      money += 25;
+      score += 1;
       enemies.splice(i, 1);
     }else{
       enemies[i].move();
