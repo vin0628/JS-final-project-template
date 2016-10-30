@@ -169,7 +169,7 @@ var tower = {
   shoot:function(){
   ctx.beginPath();
   ctx.moveTo(this.x,this.y);
-  ctx.lineTo(enemies[id].x,enemies[id].y,);
+  ctx.lineTo(enemies[id].x,enemies[id].y);
   ctx.strokeStyle='red';
   ctx.lineWidth = 3;
   ctx.stroke();
