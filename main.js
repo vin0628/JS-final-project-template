@@ -166,7 +166,7 @@ var tower = {
     this.aimingEnemyld = null
   },
   
-  shoot:function(){
+  shoot:function(i){
   ctx.beginPath();
   ctx.moveTo(this.x,this.y);
   ctx.lineTo(enemies[i].x ,enemies[i].y);
