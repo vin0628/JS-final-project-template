@@ -144,9 +144,9 @@ var tower = {
   x:0,
   y:0,
   range:96,
-  firRate:1,
+  firRate:2,
   readyToShootTime:2,
-  damage:10,
+  damage:100,
   aimingEnemyld:null,
   searchEnemy:function(){
     this.readyToShootTime -= 1/fps
