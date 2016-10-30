@@ -93,6 +93,8 @@ function draw(){
   ctx.font = "24px Arial";
   ctx.fillStyle = "white";
   ctx.fillText("HP:" + hp, 10, 50);
+  ctx.fillText("Score: " + score, 10, 80);
+  ctx.fillText("Money: " + money, 10, 110);
   
   for(var i = 0; i < enemies.length; i++){
     if(enemies[i].hp <= 0){
@@ -150,6 +152,7 @@ var tower = {
   aimingEnemyld:null,
   searchEnemy:function(){
     this.readyToShootTime -= 1/fps
+    
     for(var i=0; i < enemies.length; i++){
       var distance = Math.sqrt(
           Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
