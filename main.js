@@ -89,13 +89,13 @@ function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(eImg,Enemy.x,Enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
-    for(var i = 0; i < towers.length; i++){
+    for(var i = 0; i < Towers.length; i++){
   ctx.drawImage(towerImg, towers[i].x, towers[i].y);
     }
       
-  towers[i].searchEnemy();
-  if(towers[i].aimingEnemyld!=null){
-    var id = towers[i].aimingEnemyld;
+  Towers[i].searchEnemy();
+  if(Towers[i].aimingEnemyld!=null){
+    var id = Towers[i].aimingEnemyld;
     ctx.drawImage(crosshairlmg,enemies[id].x,
   enemies[id].y);
   }
@@ -117,10 +117,10 @@ function draw(){
     }
   }
   
-  for(var i = 0; i<towers.length; i++) {
-    towers[i].searchEnemy();
-    if(towers[i].aimingEnemyId != null) {
-      var id = towers[i].aimingEnemyId;
+  for(var i = 0; i<Towers.length; i++) {
+    Towers[i].searchEnemy();
+    if(Towers[i].aimingEnemyId != null) {
+      var id = Towers[i].aimingEnemyId;
       ctx.drawImage(crosshairImg, enemies[id].x, enemies[id].y);
     }
   }
