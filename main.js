@@ -63,6 +63,7 @@ function Enemy(){
 };
 var cursor = {x: 0, y: 0};
 var enemies = [];
+var Towers = [];
 var isBuilding = false;
 
 function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight){
@@ -83,8 +84,10 @@ function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(eImg,Enemy.x,Enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
+    for(var i = 0; i < Towers.leight; i++){
   ctx.drawImage(towerImg, tower.x, tower.y);
-  
+    }
+      
   tower.searchEnemy();
   if(tower.aimingEnemyld!=null){
     var id = tower.aimingEnemyld;
@@ -146,16 +149,17 @@ $("#game-canvas").on("mousemove", function(event) {
   cursor.y = event.offsetY - (event.offsetY%32);
 });
 
-var tower = {
-  x:0,
-  y:0,
-  range:96,
-  firRate:0.2,
-  readyToShootTime:0.2,
-  damage:100,
-  aimingEnemyld:null,
-  searchEnemy:function(){
-    this.readyToShootTime -= 1/fps
+function Tower (){
+  this.x=0;
+  this.y=0;
+  this.range=96;
+  this.firRate;0.2;
+  this.readyToShootTime=0.2;
+  this.damage=100;
+  this.aimingEnemyld=null;
+  this.searchEnem=function(){
+    this.readyToShootTime -= 1/fps;
+    this.aimingEnemyid = null;
     
     for(var i=0; i < enemies.length; i++){
       var distance = Math.sqrt(
@@ -171,9 +175,9 @@ var tower = {
       }
     }
     this.aimingEnemyld = null
-  },
+  };
   
-  shoot:function(i){
+  this.shoot:function(i){
   ctx.beginPath();
   ctx.moveTo(this.x,this.y);
   ctx.lineTo(enemies[i].x ,enemies[i].y);
@@ -195,8 +199,16 @@ $("#game-canvas").on("click", function() {
     }
   } else {
     if(isBuilding == true) {
-      tower.x = cursor.x;
-      tower.y = cursor.y;
+      if(money >= 50) {
+        var tower = new Tower();
+      
+        tower.x = cursor.x;
+        tower.y = cursor.y;
+        
+        Towers.push(tower);
+        
+        money -= 50;
+      }
       
       isBuilding = false;
     }
