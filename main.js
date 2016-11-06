@@ -135,7 +135,7 @@ if((clock%80)==0){
   }
   
 }
-avr intervalID = setInterval(draw,1000/fps);
+var intervalID = setInterval(draw,1000/fps);
 $("body").on("keypress",key);
 function key(event){
   console.log(event.which)
