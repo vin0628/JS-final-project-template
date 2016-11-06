@@ -177,7 +177,7 @@ function Tower (){
     this.aimingEnemyld = null
   };
   
-  this.shoot:function(i){
+  this.shoot=function(i){
   ctx.beginPath();
   ctx.moveTo(this.x,this.y);
   ctx.lineTo(enemies[i].x ,enemies[i].y);
