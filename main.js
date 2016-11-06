@@ -135,7 +135,7 @@ if((clock%80)==0){
   }
   
 }
-setInterval(draw,1000/fps);
+avr intervalID = setInterval(draw,1000/fps);
 $("body").on("keypress",key);
 function key(event){
   console.log(event.which)
@@ -170,7 +170,7 @@ function Tower (){
   this.readyToShootTime=0.2;
   this.damage=100;
   this.aimingEnemyld=null;
-  this.searchEnem=function(){
+  this.searchEnemy=function(){
     this.readyToShootTime -= 1/fps;
     this.aimingEnemyid = null;
     
