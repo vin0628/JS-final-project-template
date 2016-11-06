@@ -112,6 +112,14 @@ function draw(){
     }
   }
   
+  for(var i = 0; i<towers.length; i++) {
+    towers[i].searchEnemy();
+    if(towers[i].aimingEnemyId != null) {
+      var id = towers[i].aimingEnemyId;
+      ctx.drawImage(crosshairImg, enemies[id].x, enemies[id].y);
+    }
+  }
+  
   if(isBuilding == true) {
     ctx.drawImage(towerImg, cursor.x, cursor.y);  
   }
