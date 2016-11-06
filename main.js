@@ -32,6 +32,11 @@ function Enemy(){
   this.speedY=-64;
   this.move= function(){
     if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, 64/fps, 64/fps)) {
+      if(this.pathDes == enemyPath.length - 1){
+        this.hp = 0;
+        hp -= 5;
+        return;
+        }
       this.x = enemyPath[this.pathDes].x;
       this.y = enemyPath[this.pathDes].y;
       
@@ -88,7 +93,7 @@ function draw(){
   ctx.drawImage(towerImg, tower.x, tower.y);
     }
       
-  towers[i].searchEnemy();
+  towers[id].searchEnemy();
   if(tower.aimingEnemyld!=null){
     var id = tower.aimingEnemyld;
     ctx.drawImage(crosshairlmg,enemies[id].x,
