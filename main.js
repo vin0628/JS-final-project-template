@@ -89,7 +89,7 @@ function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(eImg,Enemy.x,Enemy.y);
   ctx.drawImage(tImg,640-64,480-64,64,64);
-    for(var i = 0; i < towers.lenght; i++){
+    for(var i = 0; i < towers.length; i++){
   ctx.drawImage(towerImg, towers[i].x, towers[i].y);
     }
       
