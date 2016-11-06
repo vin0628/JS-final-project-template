@@ -94,12 +94,13 @@ function draw(){
     }
       
   
+  Towers[i].searchEnemy();
   if(Towers[i].aimingEnemyld!=null){
     var id = Towers[i].aimingEnemyld;
     ctx.drawImage(crosshairlmg,enemies[id].x,
   enemies[id].y);
   }
-  Towers[i].searchEnemy();
+  
   
   ctx.font = "24px Arial";
   ctx.fillStyle = "white";
